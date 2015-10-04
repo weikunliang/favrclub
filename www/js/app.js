@@ -29,45 +29,52 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.activity', {
+    url: '/activity',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/activity.html'
       }
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
+  .state('app.shopping', {
+      url: '/shopping',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/shopping.html'
         }
       }
     })
-    .state('app.feed', {
-      url: '/feed',
+  .state('app.setting', {
+      url: '/setting',
       views: {
         'menuContent': {
-          templateUrl: 'templates/feed.html',
-          controller: 'FeedCtrl'
+          templateUrl: 'templates/setting.html'
+        }
+      }
+    })
+    .state('app.favors', {
+      url: '/favors',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/favors.html',
+          controller: 'FavorsCtrl'
         }
       }
     })
 
   .state('app.single', {
-    url: '/feed/:playlistId',
+    url: '/favors/:favorId',
     views: {
       'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+        templateUrl: 'templates/favor.html',
+        controller: 'FavorCtrl'
       }
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/feed');
+  $urlRouterProvider.otherwise('/app/favors');
 });
