@@ -3128,11 +3128,11 @@ a.subdued {
       background-image: linear-gradient(180deg, #28a54c, #0c63ee 50%, transparent 50%); }
   .bar.bar-energized {
     border-color: #e6b400;
-    background-color: #ffc900;
+    background-color: #FFFFBA;
     background-image: linear-gradient(0deg, #e6b400, #e6b400 50%, transparent 50%);
-    color: #fff; }
+    color: #222; }
     .bar.bar-energized .title {
-      color: #fff; }
+      color: #222; }
     .bar.bar-energized.bar-footer {
       background-image: linear-gradient(180deg, #e6b400, #e6b400 50%, transparent 50%); }
   .bar.bar-royal {
@@ -3367,20 +3367,20 @@ a.subdued {
 
 .bar-energized .button {
   border-color: #e6b400;
-  background-color: #ffc900;
-  color: #fff; }
+  background-color: #FFFFBA;
+  color: #222; }
   .bar-energized .button:hover {
-    color: #fff;
+    color: #222;
     text-decoration: none; }
   .bar-energized .button.active, .bar-energized .button.activated {
     border-color: #e6b400;
-    background-color: #e6b400;
+    background-color: #FFFFBA;
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1); }
   .bar-energized .button.button-clear {
     border-color: transparent;
     background: none;
     box-shadow: none;
-    color: #fff;
+    color: #222;
     font-size: 17px; }
   .bar-energized .button.button-icon {
     border-color: transparent;
