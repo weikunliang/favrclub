@@ -6,6 +6,19 @@
 	</ion-nav-buttons> 
   </ion-nav-bar>
   <ion-content>
-    <h1>Browse</h1>
+
+    <div id="list">
+
+      <div ng-repeat="shopping in shoppings">
+
+	    <div class="item item-button-right">
+	    	{{shopping.description}}
+	      	<span class="item-note">${{shopping.price}}</span>
+	    	<button class="button button-positive">
+	     	 <i class="icon ion-edit"></i>
+	    	</button>
+	    </div>
+
+	  </div> 
   </ion-content>
 </ion-view>

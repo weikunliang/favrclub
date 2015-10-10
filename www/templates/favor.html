@@ -6,6 +6,20 @@
 	</ion-nav-buttons> 
   </ion-nav-bar>
   <ion-content>
-    <h1>favor</h1>
+    <div id="list">
+	    <a class="item item-avatar" href="#">
+	      <img src="img/weikun.jpg">
+	      <h2>{{favor.username}}</h2>
+	      <p>{{favor.item}}</p>
+		  <i class="icon ion-location"></i>
+		  {{favor.location}}
+
+	    </a>
+    </div>
+
+    <div class="button-bar">
+	  <a class="button button-energized">Confirm</a>
+	  <a class="button button-energized">Cancel</a>
+	</div>  
   </ion-content>
 </ion-view>

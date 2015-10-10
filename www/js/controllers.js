@@ -9,6 +9,21 @@ angular.module('starter.controllers', [])
     { username: 'Akash', id: 5, item: 'Pack of 10 pencils', price: '10', location: 'Beeler, Pittburgh PA' },
     { username: 'Weikun', id: 6, item: 'Stapler', price: '3', location: '1069 Morewood Avenue, Pittsburgh PA' }
   ];
+
+  $scope.shoppings = [
+  	{ description: 'Eyedrops', price: '4' },
+  	{ description: 'Bag', price: '20' },
+  ];
+
+})
+
+.controller('ShoppingCtrl', function($scope) {
+
+  $scope.shoppings = [
+  	{ description: 'Eyedrops', price: '4' },
+  	{ description: 'Bag', price: '20' },
+  ];
+
 })
 
 .controller('FavorCtrl', function($scope, $stateParams) {

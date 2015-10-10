@@ -44,7 +44,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/shopping',
       views: {
         'menuContent': {
-          templateUrl: 'templates/shopping.html'
+          templateUrl: 'templates/shopping.html',
+          controller: 'ShoppingCtrl'
         }
       }
     })
