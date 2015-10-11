@@ -6,6 +6,35 @@
 	</ion-nav-buttons> 
   </ion-nav-bar>
   <ion-content>
-    <h1>Activity</h1>
+
+  	 <div class="center">
+	    <img class="img-circle" src="img/weikun.jpg">
+	</div>
+	  	<h4 class="center">Weikun Liang</h4>
+  
+
+      <div ng-repeat="a in activityPending">
+        <a class="item item-avatar item-icon-right" href="#">
+	      <img src="img/weikun.jpg">
+	      <h2>{{a.username}}</h2>
+	      <p>{{a.item}}</p>
+        <i class="icon ion-ios-clock-outline"></i>
+	
+	      </a>
+	  </div> 
+	  <div ng-repeat="a in activityComplete">
+        <a class="item item-avatar item-icon-right" href="#">
+	      <img src="img/weikun.jpg">
+	      <h2>{{a.username}}</h2>
+	      <p>{{a.item}}</p>
+        <i class="icon ion-checkmark"></i>
+	
+	      </a>
+	  </div> 
+
+
+    </ion-list>
   </ion-content>
 </ion-view>
+
+

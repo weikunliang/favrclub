@@ -6,15 +6,21 @@
 	</ion-nav-buttons> 
   </ion-nav-bar>
   <ion-content>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search">
+      </label>
+    </div>
     <div id="list">
 
       <div ng-repeat="favor in favors" href="#/app/favors/{{favor.id}}">
         <a class="item item-avatar" href="#/app/favors/{{favor.id}}">
 	      <img src="img/weikun.jpg">
 	      <h2>{{favor.username}}</h2>
-	      <p>{{favor.item}}</p>
+	      <p>{{favor.item}}<br>
   		  <i class="icon ion-location"></i>
-  		  {{favor.location}}
+  		  {{favor.location}}</p>
         <span class="badge badge-assertive">${{favor.price}}</span>
 	
 	      </a>

@@ -35,7 +35,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/activity',
     views: {
       'menuContent': {
-        templateUrl: 'templates/activity.html'
+        templateUrl: 'templates/activity.html',
+        controller: 'ActivityCtrl'
       }
     }
   })

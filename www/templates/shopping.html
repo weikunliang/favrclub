@@ -14,11 +14,21 @@
 	    <div class="item item-button-right">
 	    	{{shopping.description}}
 	      	<span class="item-note">${{shopping.price}}</span>
-	    	<button class="button button-positive">
+	    	<button class="button button-positive" ng-click="editItem()">
 	     	 <i class="icon ion-edit"></i>
 	    	</button>
 	    </div>
 
 	  </div> 
+	</div> 
   </ion-content>
+
+  <ion-footer-bar align-title="right" class="bar-light">
+	  <div class="buttons">
+	  </div>
+	  <h1 class="title"></h1>
+	  <div class="buttons" ng-click="openModal()">
+	    <button class="button"><i class="ion-ios-plus-outline"></i></button>
+	  </div>
+  </ion-footer-bar>
 </ion-view>
