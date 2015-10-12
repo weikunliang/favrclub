@@ -29,6 +29,51 @@
     <ion-nav-view></ion-nav-view>
   </body>
 
+  <script id="templates/sign-in.html" type="text/ng-template">
+      <ion-header-bar class="bar-secondary bar-energized">
+          <h1 class="title">login</h1>
+        </ion-header-bar>
+        <ion-content>
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label">Username</span>
+              <input type="text" ng-model="user.username">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Password</span>
+              <input type="password" ng-model="user.password">
+            </label>
+          </div>
+          <div class="padding">
+            <button class="button button-block button-positive" ng-click="signIn(user)">
+              Sign-In
+            </button>
+            <p class="text-center">
+              <a href="#/forgot-password">Forgot password</a>
+            </p>
+          </div>
+        </ion-content>
+      
+    </script>
+
+    <script id="templates/forgot-password.html" type="text/ng-template">
+      <ion-view view-title="Forgot Password">
+        <ion-content padding="true">
+          <p>
+            Yeah this is just a demo showing how views can be shown without tabs, then you can navigate
+            to views within tabs. Additionally, only one set of tabs needs to be written for all of the different views that should go inside the tabs. (Compared to written the same tab links in the footer of every view that's in a tab.)
+          </p>
+          <p>
+            There's no username/password, just click
+            the Sign-In button back a the sign-in view.
+          </p>
+          <p>
+            Return to <a href="#/sign-in">Sign-In</a>.
+          </p>
+        </ion-content>
+      </ion-view>
+    </script>
+
   <script id="templates/mylongform.html" type="text/ng-template">
         <ion-modal-view class="product edit create">
             <ion-header-bar class="bar-energized">

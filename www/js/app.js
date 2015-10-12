@@ -25,6 +25,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngAutocomplete'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
+  .state('signin', {
+    url: '/sign-in',
+    templateUrl: 'templates/sign-in.html',
+    controller: 'SignInCtrl'
+  })
+  .state('forgotpassword', {
+    url: '/forgot-password',
+    templateUrl: 'templates/forgot-password.html'
+  })
+
     .state('app', {
     url: '/app',
     abstract: true,
@@ -78,5 +88,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngAutocomplete'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/favors');
+  $urlRouterProvider.otherwise('/sign-in');
 });

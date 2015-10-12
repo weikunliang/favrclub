@@ -1,5 +1,14 @@
 angular.module('starter.controllers', [])
 
+.controller('SignInCtrl', function($scope, $state) {
+  
+  $scope.signIn = function(user) {
+    console.log('Sign-In', user);
+    $state.go('app.favors');
+  };
+  
+})
+
 .controller('FavorsCtrl', function($scope) {
   $scope.favors = [
     { username: 'Weikun', id: 1, item: 'Colgate 360 Optic White Toothbrush ', price: '10', location: '1069 Morewood Avenue, Pittsburgh PA' },
@@ -59,6 +68,7 @@ angular.module('starter.controllers', [])
   ];
 
 })
+
 
 .controller('FavorCtrl', function($scope, $stateParams) {
 });
