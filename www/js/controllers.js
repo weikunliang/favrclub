@@ -1,24 +1,41 @@
 angular.module('starter.controllers', [])
 
-.controller('SignInCtrl', function($scope, $state) {
-  
-  $scope.signIn = function(user) {
+.controller('SignInCtrl', function($scope, $state, $http) {
+
+  $scope.signIn = function(user, isSign) {
     console.log('Sign-In', user);
-    $state.go('app.favors');
-  };
-  
+    if (isSign == true){
+       $http.get('http://localhost:3000/users/login/' + user.username +
+                      "?password=" + user.password + "&isSign="+isSign).
+          then(function(response) {
+            if (response.data.error == null) {
+              user = response.data
+              $state.go('app.favors');
+            }
+          }, function(response) {
+            console.log("Error " + response.data.error)
+          });
+     } else {
+       console.log("We dont accept new profiles at this time");
+     };
+   }
 })
 
-.controller('FavorsCtrl', function($scope) {
+.controller('FavorsCtrl', function($scope, $http) {
   $scope.favors = [
-    { username: 'Weikun', id: 1, item: 'Colgate 360 Optic White Toothbrush ', price: '10', location: '1069 Morewood Avenue, Pittsburgh PA' },
-    { username: 'Justin', id: 2, item: 'Cooler', price: '20', location: '5000 Forbes Avenue' },
+    { username: 'Wii', id: 1, item: 'Colgate 360 Optic White Toothbrush ', price: '10', location: '1069 Morewood Avenue, Pittsburgh PA' },
+    { username: '', id: 2, item: 'Cooler', price: '20', location: '5000 Forbes Avenue' },
     { username: 'Akash', id: 3, item: 'Eyedrops', price: '7', location: 'Beeler, Pittburgh PA' },
     { username: 'Akash', id: 4, item: 'IS Shirt', price: '20', location: 'Beeler, Pittburgh PA' },
     { username: 'Akash', id: 5, item: 'Pack of 10 pencils', price: '10', location: 'Beeler, Pittburgh PA' },
     { username: 'Weikun', id: 6, item: 'Stapler', price: '3', location: '1069 Morewood Avenue, Pittsburgh PA' }
   ];
-
+  $http.get('http://localhost:3000/favors').
+     then(function(response) {
+       console.log(response.data.favors + "     " + response.data.users);
+     }, function(response) {
+       console.log("Error " + response.data.error)
+     });
 })
 
 .controller('ShoppingCtrl', function($scope, $ionicModal) {
